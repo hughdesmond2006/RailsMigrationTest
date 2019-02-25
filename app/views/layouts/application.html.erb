@@ -9,6 +9,11 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  	
+    <!-- webpack references-->
+  	<!--<%= javascript_pack_tag 'application' %>-->
+  	<%= javascript_pack_tag 'index' %>
+
   </head>
 
   <body>
@@ -26,6 +31,8 @@
 	<div class="container">
 		<%= yield %>
 	</div>
+
+
 
   </body>
 </html>

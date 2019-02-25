@@ -4,8 +4,12 @@ Rails.application.routes.draw do
 #root route
 root 'posts#index', as: 'home'
 
+match '*path', to: 'posts#index', via: :all
+
+
+
 #normal route
-get 'about' => 'pages#about', as: 'about'
+#get 'aboutus' => 'pages#aboutus', as: 'aboutus'
 
 
 
@@ -13,3 +17,5 @@ resources :posts do
 	resources :comments
 end
 end
+
+
